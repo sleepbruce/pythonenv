@@ -9,7 +9,6 @@ RUN set -ex \
 	&& pip install PyYAML==5.3.1 \
 	&& pip install APScheduler==3.6.3 \
 	&& pip install uvicorn==0.11.6 \
-	&& pip install pydantic==1.7.2 \
 	&& apk --no-cache add tzdata \
 	&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 	&& echo "Asia/Shanghai" > /etc/timezone
