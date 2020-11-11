@@ -1,5 +1,5 @@
-#FROM python:3.8.6-alpine3.12
-FROM python:3.6.8-slim-stretch
+FROM python:3.8.6-alpine3.12
+#FROM python:3.6.8-slim-stretch
 RUN set -ex \
 	&& apk add g++ libssl-dev libbz2-dev \
 	&& apk add libjpeg-dev zlib1g-dev \
