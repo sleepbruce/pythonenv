@@ -1,5 +1,6 @@
 FROM python:3.8.3-slim
 #FROM python:3.6.8-slim-stretch
+ENV TZ Asia/Shanghai
 RUN set -ex \
         && apt-get update \
         && apt-get install -y gcc g++ libjpeg-dev zlib1g-dev \
@@ -9,6 +10,3 @@ RUN set -ex \
 	&& pip install PyYAML==5.3.1 \
 	&& pip install APScheduler==3.6.3 \
 	&& pip install uvicorn==0.11.6 \
-	&& apk --no-cache add tzdata \
-	&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-	&& echo "Asia/Shanghai" > /etc/timezone
