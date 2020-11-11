@@ -1,8 +1,8 @@
-FROM python:3.8.6-alpine3.12
+FROM python:3.8.6-slim-stretch
 #FROM python:3.6.8-slim-stretch
 RUN set -ex \
-	#&& apk add g++ libssl-dev libbz2-dev \
-	#&& apk add libjpeg-dev zlib1g-dev \
+        && apt-get update \
+        && apt-get install -y gcc g++ libjpeg-dev zlib1g-dev \
 	&& pip install pymysql==0.9.3 \
 	&& pip install fastapi==0.61.1 \
 	&& pip install vertica-python==0.11.0 \
