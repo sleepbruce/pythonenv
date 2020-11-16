@@ -10,4 +10,5 @@ RUN set -ex \
 	&& pip install PyYAML==5.3.1 \
 	&& pip install APScheduler==3.6.3 \
 	&& pip install uvicorn==0.11.6 \
-	&& pip install gunicorn==20.0.4
+	&& pip install gunicorn==20.0.4 \
+	&& pip install SQLAlchemy==1.3.19
